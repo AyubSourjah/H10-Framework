@@ -14,7 +14,7 @@ namespace H10.Data
         private readonly TenantProvider _tenantProvider;
         private readonly DbConnection _tenantConnection;
         private readonly DbConnection _masterConnection;
-        private bool disposedValue;
+        private bool _disposedValue;
 
         public TenantDatabase(TenantProvider tenantProvider)
         {
@@ -29,7 +29,7 @@ namespace H10.Data
         }
         protected virtual void Dispose(bool disposing)
         {
-            if (!disposedValue)
+            if (!_disposedValue)
             {
                 if (disposing)
                 {
@@ -38,7 +38,7 @@ namespace H10.Data
 
                 // TODO: free unmanaged resources (unmanaged objects) and override finalizer
                 // TODO: set large fields to null
-                disposedValue = true;
+                _disposedValue = true;
             }
         }
         public void Dispose()

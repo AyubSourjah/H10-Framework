@@ -10,7 +10,7 @@ namespace H10.Data
     {
         private DbConnection _masterConnection = null;
         private DbConnection _tenantConnection = null;
-        private bool disposedValue;
+        private bool _disposedValue;
         private readonly IConfiguration _configuration;
         private readonly DbProviderFactory _databaseFactory;
         private readonly string _subDomain;
@@ -90,7 +90,7 @@ namespace H10.Data
         }
         protected virtual void Dispose(bool disposing)
         {
-            if (!disposedValue)
+            if (!_disposedValue)
             {
                 if (disposing)
                 {
@@ -100,7 +100,7 @@ namespace H10.Data
 
                 // TODO: free unmanaged resources (unmanaged objects) and override finalizer
                 // TODO: set large fields to null
-                disposedValue = true;
+                _disposedValue = true;
             }
         }
         public void Dispose()
