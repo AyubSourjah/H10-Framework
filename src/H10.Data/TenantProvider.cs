@@ -6,7 +6,7 @@ using Microsoft.Extensions.Configuration;
 
 namespace H10.Data
 {
-    public class ProviderManager
+    public class TenantProvider
     {
         private IDbConnection _masterConnection = null;
         private IDbConnection _tenantConnection = null;
@@ -15,7 +15,7 @@ namespace H10.Data
         private readonly string _subDomain;
         private readonly string _tenantConnectionString = string.Empty;
 
-        public ProviderManager(IConfiguration configuration, string domain)
+        public TenantProvider(IConfiguration configuration, string domain)
         {
             if (string.IsNullOrEmpty(domain))
                 throw new ArgumentNullException("Domain name argument cannot be null or empty");

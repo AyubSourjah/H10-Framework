@@ -1930,31 +1930,37 @@
     ]
   },
   "packageFolders": {
-    "/home/ayub/.nuget/packages/": {}
+    "C:\\Users\\Ayub\\.nuget\\packages\\": {},
+    "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "/home/ayub/Documents/Projects/H10-Framework/src/H10.Data/H10.Data.csproj",
+      "projectUniqueName": "D:\\GitHub\\H10-Framework\\src\\H10.Data\\H10.Data.csproj",
       "projectName": "H10.Data",
-      "projectPath": "/home/ayub/Documents/Projects/H10-Framework/src/H10.Data/H10.Data.csproj",
-      "packagesPath": "/home/ayub/.nuget/packages/",
-      "outputPath": "/home/ayub/Documents/Projects/H10-Framework/src/H10.Data/obj/",
+      "projectPath": "D:\\GitHub\\H10-Framework\\src\\H10.Data\\H10.Data.csproj",
+      "packagesPath": "C:\\Users\\Ayub\\.nuget\\packages\\",
+      "outputPath": "D:\\GitHub\\H10-Framework\\src\\H10.Data\\obj\\",
       "projectStyle": "PackageReference",
+      "fallbackFolders": [
+        "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+      ],
       "configFilePaths": [
-        "/home/ayub/.nuget/NuGet/NuGet.Config"
+        "C:\\Users\\Ayub\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
         "netstandard2.1"
       ],
       "sources": {
+        "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
         "https://api.nuget.org/v3/index.json": {}
       },
       "frameworks": {
         "netstandard2.1": {
           "projectReferences": {
-            "/home/ayub/Documents/Projects/H10-Framework/src/H10.Shared/H10.Shared.csproj": {
-              "projectPath": "/home/ayub/Documents/Projects/H10-Framework/src/H10.Shared/H10.Shared.csproj"
+            "D:\\GitHub\\H10-Framework\\src\\H10.Shared\\H10.Shared.csproj": {
+              "projectPath": "D:\\GitHub\\H10-Framework\\src\\H10.Shared\\H10.Shared.csproj"
             }
           }
         }
@@ -1996,7 +2002,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "/usr/share/dotnet/sdk/3.1.302/RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.302\\RuntimeIdentifierGraph.json"
       }
     }
   }

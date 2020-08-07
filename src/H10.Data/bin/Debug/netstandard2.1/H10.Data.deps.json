@@ -9,6 +9,7 @@
     ".NETStandard,Version=v2.1/": {
       "H10.Data/1.0.0": {
         "dependencies": {
+          "H10.Shared": "1.0.0",
           "Microsoft.Extensions.Configuration": "3.1.6",
           "System.Data.Common": "4.3.0",
           "System.Data.SqlClient": "4.8.1"
@@ -210,7 +211,7 @@
         "runtime": {
           "lib/netstandard2.0/System.Runtime.CompilerServices.Unsafe.dll": {
             "assemblyVersion": "4.0.6.0",
-            "fileVersion": "4.0.0.0"
+            "fileVersion": "4.700.20.12001"
           }
         }
       },
@@ -291,6 +292,11 @@
           "Microsoft.NETCore.Platforms": "1.1.0",
           "Microsoft.NETCore.Targets": "1.1.0",
           "System.Runtime": "4.3.0"
+        }
+      },
+      "H10.Shared/1.0.0": {
+        "runtime": {
+          "H10.Shared.dll": {}
         }
       }
     }
@@ -524,6 +530,11 @@
       "sha512": "sha512-LbSxKEdOUhVe8BezB/9uOGGppt+nZf6e1VFyw6v3DN6lqitm0OSn2uXMOdtP0M3W4iMcqcivm2J6UgqiwwnXiA==",
       "path": "system.threading.tasks/4.3.0",
       "hashPath": "system.threading.tasks.4.3.0.nupkg.sha512"
+    },
+    "H10.Shared/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
     }
   }
 }

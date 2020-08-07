@@ -11,3 +11,12 @@
 /home/ayub/Documents/Projects/H10-Framework/src/H10.Shared/bin/Debug/netstandard2.1/H10.Shared.pdb
 /home/ayub/Documents/Projects/H10-Framework/src/H10.Shared/obj/Debug/netstandard2.1/H10.Shared.dll
 /home/ayub/Documents/Projects/H10-Framework/src/H10.Shared/obj/Debug/netstandard2.1/H10.Shared.pdb
+D:\GitHub\H10-Framework\src\H10.Shared\bin\Debug\netstandard2.1\H10.Shared.deps.json
+D:\GitHub\H10-Framework\src\H10.Shared\bin\Debug\netstandard2.1\H10.Shared.dll
+D:\GitHub\H10-Framework\src\H10.Shared\bin\Debug\netstandard2.1\H10.Shared.pdb
+D:\GitHub\H10-Framework\src\H10.Shared\obj\Debug\netstandard2.1\H10.Shared.csprojAssemblyReference.cache
+D:\GitHub\H10-Framework\src\H10.Shared\obj\Debug\netstandard2.1\H10.Shared.AssemblyInfoInputs.cache
+D:\GitHub\H10-Framework\src\H10.Shared\obj\Debug\netstandard2.1\H10.Shared.AssemblyInfo.cs
+D:\GitHub\H10-Framework\src\H10.Shared\obj\Debug\netstandard2.1\H10.Shared.csproj.CoreCompileInputs.cache
+D:\GitHub\H10-Framework\src\H10.Shared\obj\Debug\netstandard2.1\H10.Shared.dll
+D:\GitHub\H10-Framework\src\H10.Shared\obj\Debug\netstandard2.1\H10.Shared.pdb
