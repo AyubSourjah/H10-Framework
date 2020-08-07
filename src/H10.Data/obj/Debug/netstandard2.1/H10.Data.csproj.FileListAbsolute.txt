@@ -1,0 +1,12 @@
+/home/ayub/Documents/Projects/H10-Framework/src/H10.Data/bin/Debug/netstandard2.1/H10.Data.deps.json
+/home/ayub/Documents/Projects/H10-Framework/src/H10.Data/bin/Debug/netstandard2.1/H10.Data.dll
+/home/ayub/Documents/Projects/H10-Framework/src/H10.Data/bin/Debug/netstandard2.1/H10.Data.pdb
+/home/ayub/Documents/Projects/H10-Framework/src/H10.Data/obj/Debug/netstandard2.1/H10.Data.csprojAssemblyReference.cache
+/home/ayub/Documents/Projects/H10-Framework/src/H10.Data/obj/Debug/netstandard2.1/H10.Data.AssemblyInfoInputs.cache
+/home/ayub/Documents/Projects/H10-Framework/src/H10.Data/obj/Debug/netstandard2.1/H10.Data.AssemblyInfo.cs
+/home/ayub/Documents/Projects/H10-Framework/src/H10.Data/obj/Debug/netstandard2.1/H10.Data.csproj.CoreCompileInputs.cache
+/home/ayub/Documents/Projects/H10-Framework/src/H10.Data/obj/Debug/netstandard2.1/H10.Data.dll
+/home/ayub/Documents/Projects/H10-Framework/src/H10.Data/obj/Debug/netstandard2.1/H10.Data.pdb
+/home/ayub/Documents/Projects/H10-Framework/src/H10.Data/bin/Debug/netstandard2.1/H10.Shared.dll
+/home/ayub/Documents/Projects/H10-Framework/src/H10.Data/bin/Debug/netstandard2.1/H10.Shared.pdb
+/home/ayub/Documents/Projects/H10-Framework/src/H10.Data/obj/Debug/netstandard2.1/H10.Data.csproj.CopyComplete

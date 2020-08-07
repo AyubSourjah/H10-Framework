@@ -1,0 +1,63 @@
+{
+  "version": 3,
+  "targets": {
+    ".NETStandard,Version=v2.1": {}
+  },
+  "libraries": {},
+  "projectFileDependencyGroups": {
+    ".NETStandard,Version=v2.1": []
+  },
+  "packageFolders": {
+    "/home/ayub/.nuget/packages/": {}
+  },
+  "project": {
+    "version": "1.0.0",
+    "restore": {
+      "projectUniqueName": "/home/ayub/Documents/Projects/H10-Framework/src/H10.Shared/H10.Shared.csproj",
+      "projectName": "H10.Shared",
+      "projectPath": "/home/ayub/Documents/Projects/H10-Framework/src/H10.Shared/H10.Shared.csproj",
+      "packagesPath": "/home/ayub/.nuget/packages/",
+      "outputPath": "/home/ayub/Documents/Projects/H10-Framework/src/H10.Shared/obj/",
+      "projectStyle": "PackageReference",
+      "configFilePaths": [
+        "/home/ayub/.nuget/NuGet/NuGet.Config"
+      ],
+      "originalTargetFrameworks": [
+        "netstandard2.1"
+      ],
+      "sources": {
+        "https://api.nuget.org/v3/index.json": {}
+      },
+      "frameworks": {
+        "netstandard2.1": {
+          "projectReferences": {}
+        }
+      },
+      "warningProperties": {
+        "warnAsError": [
+          "NU1605"
+        ]
+      }
+    },
+    "frameworks": {
+      "netstandard2.1": {
+        "imports": [
+          "net461",
+          "net462",
+          "net47",
+          "net471",
+          "net472",
+          "net48"
+        ],
+        "assetTargetFallback": true,
+        "warn": true,
+        "frameworkReferences": {
+          "NETStandard.Library": {
+            "privateAssets": "all"
+          }
+        },
+        "runtimeIdentifierGraphPath": "/usr/share/dotnet/sdk/3.1.302/RuntimeIdentifierGraph.json"
+      }
+    }
+  }
+}

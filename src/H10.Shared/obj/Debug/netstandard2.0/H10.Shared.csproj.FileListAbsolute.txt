@@ -1,0 +1,4 @@
+/home/ayub/Documents/Projects/H10-Framework/H10.Shared/obj/Debug/netstandard2.0/H10.Shared.csprojAssemblyReference.cache
+/home/ayub/Documents/Projects/H10-Framework/H10.Shared/obj/Debug/netstandard2.0/H10.Shared.AssemblyInfoInputs.cache
+/home/ayub/Documents/Projects/H10-Framework/H10.Shared/obj/Debug/netstandard2.0/H10.Shared.AssemblyInfo.cs
+/home/ayub/Documents/Projects/H10-Framework/H10.Shared/obj/Debug/netstandard2.0/H10.Shared.csproj.CoreCompileInputs.cache
