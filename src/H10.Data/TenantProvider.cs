@@ -6,10 +6,11 @@ using Microsoft.Extensions.Configuration;
 
 namespace H10.Data
 {
-    public class TenantProvider
+    public class TenantProvider : IDisposable
     {
-        private IDbConnection _masterConnection = null;
-        private IDbConnection _tenantConnection = null;
+        private DbConnection _masterConnection = null;
+        private DbConnection _tenantConnection = null;
+        private bool disposedValue;
         private readonly IConfiguration _configuration;
         private readonly DbProviderFactory _databaseFactory;
         private readonly string _subDomain;
@@ -25,7 +26,7 @@ namespace H10.Data
             this._databaseFactory = DbProviderFactories.GetFactory(_configuration[SettingKeys.RepositoryProvider]);
             this._tenantConnectionString = this.GetTenantConnectionString();
         }
-        public IDbConnection GetTenantConnection()
+        internal DbConnection GetTenantConnection()
         {
             if (_tenantConnection == null)
             {
@@ -35,7 +36,7 @@ namespace H10.Data
 
             return _tenantConnection;
         }
-        private IDbConnection GetMasterConnection()
+        internal DbConnection GetMasterConnection()
         {
             if (_masterConnection == null)
             {
@@ -86,6 +87,27 @@ namespace H10.Data
             }
 
             return _tenantConnectionString;
+        }
+        protected virtual void Dispose(bool disposing)
+        {
+            if (!disposedValue)
+            {
+                if (disposing)
+                {
+                    _masterConnection.Dispose();
+                    _tenantConnection.Dispose();
+                }
+
+                // TODO: free unmanaged resources (unmanaged objects) and override finalizer
+                // TODO: set large fields to null
+                disposedValue = true;
+            }
+        }
+        public void Dispose()
+        {
+            // Do not change this code. Put cleanup code in 'Dispose(bool disposing)' method
+            Dispose(disposing: true);
+            GC.SuppressFinalize(this);
         }
     }
 }
