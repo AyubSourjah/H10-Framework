@@ -23,29 +23,29 @@ namespace H10.Data
 
             this._configuration = configuration;
             this._subDomain = H10.Shared.DomainNameHandler.GetSubDomain(value: domain);
-            this._databaseFactory = DbProviderFactories.GetFactory(_configuration[SettingKeys.RepositoryProvider]);
+            this._databaseFactory = DbProviderFactories.GetFactory(this._configuration[SettingKeys.RepositoryProvider]);
             this._tenantConnectionString = this.GetTenantConnectionString();
         }
         internal DbConnection GetTenantConnection()
         {
-            if (_tenantConnection == null)
+            if (this._tenantConnection == null)
             {
-                _tenantConnection = _databaseFactory.CreateConnection();
-                _tenantConnection.ConnectionString = _tenantConnectionString;
+                this._tenantConnection = this._databaseFactory.CreateConnection();
+                this._tenantConnection.ConnectionString = this._tenantConnectionString;
             }
 
-            return _tenantConnection;
+            return this._tenantConnection;
         }
         internal DbConnection GetMasterConnection()
         {
-            if (_masterConnection == null)
+            if (this._masterConnection == null)
             {
-                string repServer = _configuration[SettingKeys.RepositoryServer];
-                string repCatalog = _configuration[SettingKeys.RepositoryCatalog];
-                string repUserName = _configuration[SettingKeys.RepositoryUserName];
-                string repPassword = _configuration[SettingKeys.RepositoryPassword];
+                string repServer = this._configuration[SettingKeys.RepositoryServer];
+                string repCatalog = this._configuration[SettingKeys.RepositoryCatalog];
+                string repUserName = this._configuration[SettingKeys.RepositoryUserName];
+                string repPassword = this._configuration[SettingKeys.RepositoryPassword];
 
-                var dbConnectionStringBuilder = _databaseFactory.CreateConnectionStringBuilder();
+                var dbConnectionStringBuilder = this._databaseFactory.CreateConnectionStringBuilder();
 
                 if (dbConnectionStringBuilder.GetType() == typeof(SqlConnectionStringBuilder))
                 {
@@ -55,26 +55,26 @@ namespace H10.Data
                     dbConnectionStringBuilder[SqlKeys.Password] = repPassword;
                     dbConnectionStringBuilder[SqlKeys.Trusted] = "True";
 
-                    _masterConnection = _databaseFactory.CreateConnection();
-                    _masterConnection.ConnectionString = dbConnectionStringBuilder.ConnectionString;
+                    this._masterConnection = this._databaseFactory.CreateConnection();
+                    this._masterConnection.ConnectionString = dbConnectionStringBuilder.ConnectionString;
 
-                    return _masterConnection;
+                    return this._masterConnection;
                 }
                 else throw new NotSupportedException("Database provider not supported");
             }
 
-            return _masterConnection;
+            return this._masterConnection;
         }
         private string GetTenantConnectionString()
         {
-            if (String.IsNullOrEmpty(_tenantConnectionString) == true)
+            if (String.IsNullOrEmpty(this._tenantConnectionString) == true)
             {
                 using var cnn = this.GetMasterConnection();
                 cnn.Open();
 
                 using var cmd = cnn.CreateCommand();
                 cmd.CommandType = CommandType.StoredProcedure;
-                cmd.CommandText = "sp_GetClientRepositoryDetails";
+                cmd.CommandText = "spthis._GetClientRepositoryDetails";
 
                 using var reader = cmd.ExecuteReader();
 
@@ -86,21 +86,21 @@ namespace H10.Data
                 cnn.Close();
             }
 
-            return _tenantConnectionString;
+            return this._tenantConnectionString;
         }
         protected virtual void Dispose(bool disposing)
         {
-            if (!_disposedValue)
+            if (!this._disposedValue)
             {
                 if (disposing)
                 {
-                    _masterConnection.Dispose();
-                    _tenantConnection.Dispose();
+                    this._masterConnection.Dispose();
+                    this._tenantConnection.Dispose();
                 }
 
                 // TODO: free unmanaged resources (unmanaged objects) and override finalizer
                 // TODO: set large fields to null
-                _disposedValue = true;
+                this._disposedValue = true;
             }
         }
         public void Dispose()
