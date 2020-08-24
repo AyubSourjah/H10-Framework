@@ -18,12 +18,9 @@ namespace H10.Shared
             return string.Empty;
         }
 
-        public void Refresh()
-        {
-        }
-
         private void BuildConfiguration()
         {
+            string shellBaseUrl = this._configuration["Services/Shell/BaseUrl"];
         }
     }
 }

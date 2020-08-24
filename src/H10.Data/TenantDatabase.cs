@@ -8,7 +8,6 @@ namespace H10.Data
         Tenant = 0,
         Master = 1
     }
-
     public class TenantDatabase : IDisposable
     {
         private readonly TenantProvider _tenantProvider;
@@ -18,14 +17,14 @@ namespace H10.Data
 
         public TenantDatabase(TenantProvider tenantProvider)
         {
-            this._tenantProvider = tenantProvider;
-            this._tenantConnection = tenantProvider.GetTenantConnection();
-            this._masterConnection = tenantProvider.GetMasterConnection();
+            _tenantProvider = tenantProvider;
+            _tenantConnection = tenantProvider.GetTenantConnection();
+            _masterConnection = tenantProvider.GetMasterConnection();
         }
         public DbCommand CreateCommand(TargetEnvironment targetEnvironment = TargetEnvironment.Tenant)
         {
             return targetEnvironment == TargetEnvironment.Tenant ?
-                this._tenantConnection.CreateCommand() : this._masterConnection.CreateCommand();
+                _tenantConnection.CreateCommand() : _masterConnection.CreateCommand();
         }
         protected virtual void Dispose(bool disposing)
         {
@@ -33,11 +32,9 @@ namespace H10.Data
             {
                 if (disposing)
                 {
-                    this._tenantProvider.Dispose();
+                    _tenantProvider.Dispose();
                 }
 
-                // TODO: free unmanaged resources (unmanaged objects) and override finalizer
-                // TODO: set large fields to null
                 _disposedValue = true;
             }
         }

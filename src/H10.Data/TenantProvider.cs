@@ -14,40 +14,41 @@ namespace H10.Data
         private readonly IConfiguration _configuration;
         private readonly DbProviderFactory _databaseFactory;
         private readonly string _subDomain;
-        private readonly string _tenantConnectionString = string.Empty;
+        private readonly string _tenantConnectionString;
 
         public TenantProvider(IConfiguration configuration, string domain)
         {
             if (string.IsNullOrEmpty(domain))
                 throw new ArgumentNullException("Domain name argument cannot be null or empty");
 
-            this._configuration = configuration;
-            this._subDomain = H10.Shared.DomainNameHandler.GetSubDomain(value: domain);
-            this._databaseFactory = DbProviderFactories.GetFactory(this._configuration[SettingKeys.RepositoryProvider]);
-            this._tenantConnectionString = this.GetTenantConnectionString();
+            _configuration = configuration;
+            _subDomain = Shared.DomainNameHandler.GetSubDomain(value: domain);
+            _databaseFactory = DbProviderFactories.GetFactory(_configuration[SettingKeys.RepositoryProvider]);
+            _tenantConnectionString = GetTenantConnectionString();
         }
         internal DbConnection GetTenantConnection()
         {
-            if (this._tenantConnection == null)
+            if (_tenantConnection == null)
             {
-                this._tenantConnection = this._databaseFactory.CreateConnection();
-                this._tenantConnection.ConnectionString = this._tenantConnectionString;
+                _tenantConnection = _databaseFactory.CreateConnection();
+                if (_tenantConnection != null)
+                    _tenantConnection.ConnectionString = _tenantConnectionString;
             }
 
-            return this._tenantConnection;
+            return _tenantConnection;
         }
         internal DbConnection GetMasterConnection()
         {
-            if (this._masterConnection == null)
+            if (_masterConnection == null)
             {
-                string repServer = this._configuration[SettingKeys.RepositoryServer];
-                string repCatalog = this._configuration[SettingKeys.RepositoryCatalog];
-                string repUserName = this._configuration[SettingKeys.RepositoryUserName];
-                string repPassword = this._configuration[SettingKeys.RepositoryPassword];
+                string repServer = _configuration[SettingKeys.RepositoryServer];
+                string repCatalog = _configuration[SettingKeys.RepositoryCatalog];
+                string repUserName = _configuration[SettingKeys.RepositoryUserName];
+                string repPassword = _configuration[SettingKeys.RepositoryPassword];
 
-                var dbConnectionStringBuilder = this._databaseFactory.CreateConnectionStringBuilder();
+                var dbConnectionStringBuilder = _databaseFactory.CreateConnectionStringBuilder();
 
-                if (dbConnectionStringBuilder.GetType() == typeof(SqlConnectionStringBuilder))
+                if (dbConnectionStringBuilder is SqlConnectionStringBuilder)
                 {
                     dbConnectionStringBuilder[SqlKeys.Server] = repServer;
                     dbConnectionStringBuilder[SqlKeys.Database] = repCatalog;
@@ -55,26 +56,26 @@ namespace H10.Data
                     dbConnectionStringBuilder[SqlKeys.Password] = repPassword;
                     dbConnectionStringBuilder[SqlKeys.Trusted] = "True";
 
-                    this._masterConnection = this._databaseFactory.CreateConnection();
-                    this._masterConnection.ConnectionString = dbConnectionStringBuilder.ConnectionString;
-
-                    return this._masterConnection;
+                    _masterConnection = _databaseFactory.CreateConnection();
+                    if (_masterConnection != null)
+                        _masterConnection.ConnectionString = dbConnectionStringBuilder.ConnectionString;
+                    else throw new InvalidOperationException("Master connection not initialized");
                 }
                 else throw new NotSupportedException("Database provider not supported");
             }
 
-            return this._masterConnection;
+            return _masterConnection;
         }
         private string GetTenantConnectionString()
         {
-            if (String.IsNullOrEmpty(this._tenantConnectionString) == true)
+            if (String.IsNullOrEmpty(_tenantConnectionString) == true)
             {
-                using var cnn = this.GetMasterConnection();
+                using var cnn = GetMasterConnection();
                 cnn.Open();
 
                 using var cmd = cnn.CreateCommand();
                 cmd.CommandType = CommandType.StoredProcedure;
-                cmd.CommandText = "spthis._GetClientRepositoryDetails";
+                cmd.CommandText = "sp_GetClientRepositoryDetails";
 
                 using var reader = cmd.ExecuteReader();
 
@@ -86,21 +87,21 @@ namespace H10.Data
                 cnn.Close();
             }
 
-            return this._tenantConnectionString;
+            return _tenantConnectionString;
         }
         protected virtual void Dispose(bool disposing)
         {
-            if (!this._disposedValue)
+            if (!_disposedValue)
             {
                 if (disposing)
                 {
-                    this._masterConnection.Dispose();
-                    this._tenantConnection.Dispose();
+                    _masterConnection.Close();
+                    _masterConnection.Dispose();
+                    _tenantConnection.Close();
+                    _tenantConnection.Dispose();
                 }
 
-                // TODO: free unmanaged resources (unmanaged objects) and override finalizer
-                // TODO: set large fields to null
-                this._disposedValue = true;
+                _disposedValue = true;
             }
         }
         public void Dispose()
