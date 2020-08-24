@@ -1,8 +1,16 @@
 {
   "version": 2,
-  "dgSpecHash": "HmA6VkLlBMFMV++94OHceKWLi6g9CZhp9PkImQlTgVLssemJJAnkszM6zl4ONnlFzFJJgXN4MXWQRDrRdVwr0w==",
+  "dgSpecHash": "iDiNgT6SlZ3shrue2KLir3VCIEBq9myZMEbpBuB77wVIFvEUWoUaHXIoqVwcZIgfZQyGYiYOhmOmNG3TI5t9Jw==",
   "success": true,
-  "projectFilePath": "D:\\GitHub\\H10-Framework\\src\\H10.Shared\\H10.Shared.csproj",
-  "expectedPackageFiles": [],
+  "projectFilePath": "/home/ayub/Documents/GitHub/H10-Framework/src/H10.Shared/H10.Shared.csproj",
+  "expectedPackageFiles": [
+    "/home/ayub/.nuget/packages/microsoft.extensions.configuration/3.1.6/microsoft.extensions.configuration.3.1.6.nupkg.sha512",
+    "/home/ayub/.nuget/packages/microsoft.extensions.configuration.abstractions/3.1.6/microsoft.extensions.configuration.abstractions.3.1.6.nupkg.sha512",
+    "/home/ayub/.nuget/packages/microsoft.extensions.primitives/3.1.6/microsoft.extensions.primitives.3.1.6.nupkg.sha512",
+    "/home/ayub/.nuget/packages/system.buffers/4.4.0/system.buffers.4.4.0.nupkg.sha512",
+    "/home/ayub/.nuget/packages/system.memory/4.5.2/system.memory.4.5.2.nupkg.sha512",
+    "/home/ayub/.nuget/packages/system.numerics.vectors/4.4.0/system.numerics.vectors.4.4.0.nupkg.sha512",
+    "/home/ayub/.nuget/packages/system.runtime.compilerservices.unsafe/4.7.1/system.runtime.compilerservices.unsafe.4.7.1.nupkg.sha512"
+  ],
   "logs": []
 }

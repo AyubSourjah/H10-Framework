@@ -1,30 +1,25 @@
 {
   "format": 1,
   "restore": {
-    "D:\\GitHub\\H10-Framework\\src\\H10.Shared\\H10.Shared.csproj": {}
+    "/home/ayub/Documents/GitHub/H10-Framework/src/H10.Shared/H10.Shared.csproj": {}
   },
   "projects": {
-    "D:\\GitHub\\H10-Framework\\src\\H10.Shared\\H10.Shared.csproj": {
+    "/home/ayub/Documents/GitHub/H10-Framework/src/H10.Shared/H10.Shared.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\GitHub\\H10-Framework\\src\\H10.Shared\\H10.Shared.csproj",
+        "projectUniqueName": "/home/ayub/Documents/GitHub/H10-Framework/src/H10.Shared/H10.Shared.csproj",
         "projectName": "H10.Shared",
-        "projectPath": "D:\\GitHub\\H10-Framework\\src\\H10.Shared\\H10.Shared.csproj",
-        "packagesPath": "C:\\Users\\Ayub\\.nuget\\packages\\",
-        "outputPath": "D:\\GitHub\\H10-Framework\\src\\H10.Shared\\obj\\",
+        "projectPath": "/home/ayub/Documents/GitHub/H10-Framework/src/H10.Shared/H10.Shared.csproj",
+        "packagesPath": "/home/ayub/.nuget/packages/",
+        "outputPath": "/home/ayub/Documents/GitHub/H10-Framework/src/H10.Shared/obj/",
         "projectStyle": "PackageReference",
-        "fallbackFolders": [
-          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
-        ],
         "configFilePaths": [
-          "C:\\Users\\Ayub\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+          "/home/ayub/.nuget/NuGet/NuGet.Config"
         ],
         "originalTargetFrameworks": [
           "netstandard2.1"
         ],
         "sources": {
-          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
@@ -40,6 +35,12 @@
       },
       "frameworks": {
         "netstandard2.1": {
+          "dependencies": {
+            "Microsoft.Extensions.Configuration": {
+              "target": "Package",
+              "version": "[3.1.6, )"
+            }
+          },
           "imports": [
             "net461",
             "net462",
@@ -55,7 +56,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.302\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "/usr/share/dotnet/sdk/3.1.401/RuntimeIdentifierGraph.json"
         }
       }
     }

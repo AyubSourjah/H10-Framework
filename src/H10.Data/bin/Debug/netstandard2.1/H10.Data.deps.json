@@ -211,7 +211,7 @@
         "runtime": {
           "lib/netstandard2.0/System.Runtime.CompilerServices.Unsafe.dll": {
             "assemblyVersion": "4.0.6.0",
-            "fileVersion": "4.700.20.12001"
+            "fileVersion": "4.0.0.0"
           }
         }
       },
@@ -295,6 +295,9 @@
         }
       },
       "H10.Shared/1.0.0": {
+        "dependencies": {
+          "Microsoft.Extensions.Configuration": "3.1.6"
+        },
         "runtime": {
           "H10.Shared.dll": {}
         }

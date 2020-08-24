@@ -416,6 +416,9 @@
       "H10.Shared/1.0.0": {
         "type": "project",
         "framework": ".NETStandard,Version=v2.1",
+        "dependencies": {
+          "Microsoft.Extensions.Configuration": "3.1.6"
+        },
         "compile": {
           "bin/placeholder/H10.Shared.dll": {}
         },
@@ -1930,37 +1933,31 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\Ayub\\.nuget\\packages\\": {},
-    "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder": {}
+    "/home/ayub/.nuget/packages/": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\GitHub\\H10-Framework\\src\\H10.Data\\H10.Data.csproj",
+      "projectUniqueName": "/home/ayub/Documents/GitHub/H10-Framework/src/H10.Data/H10.Data.csproj",
       "projectName": "H10.Data",
-      "projectPath": "D:\\GitHub\\H10-Framework\\src\\H10.Data\\H10.Data.csproj",
-      "packagesPath": "C:\\Users\\Ayub\\.nuget\\packages\\",
-      "outputPath": "D:\\GitHub\\H10-Framework\\src\\H10.Data\\obj\\",
+      "projectPath": "/home/ayub/Documents/GitHub/H10-Framework/src/H10.Data/H10.Data.csproj",
+      "packagesPath": "/home/ayub/.nuget/packages/",
+      "outputPath": "/home/ayub/Documents/GitHub/H10-Framework/src/H10.Data/obj/",
       "projectStyle": "PackageReference",
-      "fallbackFolders": [
-        "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
-      ],
       "configFilePaths": [
-        "C:\\Users\\Ayub\\AppData\\Roaming\\NuGet\\NuGet.Config",
-        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        "/home/ayub/.nuget/NuGet/NuGet.Config"
       ],
       "originalTargetFrameworks": [
         "netstandard2.1"
       ],
       "sources": {
-        "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
         "https://api.nuget.org/v3/index.json": {}
       },
       "frameworks": {
         "netstandard2.1": {
           "projectReferences": {
-            "D:\\GitHub\\H10-Framework\\src\\H10.Shared\\H10.Shared.csproj": {
-              "projectPath": "D:\\GitHub\\H10-Framework\\src\\H10.Shared\\H10.Shared.csproj"
+            "/home/ayub/Documents/GitHub/H10-Framework/src/H10.Shared/H10.Shared.csproj": {
+              "projectPath": "/home/ayub/Documents/GitHub/H10-Framework/src/H10.Shared/H10.Shared.csproj"
             }
           }
         }
@@ -2002,7 +1999,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.302\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "/usr/share/dotnet/sdk/3.1.401/RuntimeIdentifierGraph.json"
       }
     }
   }
