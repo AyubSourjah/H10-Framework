@@ -1,9 +1,10 @@
 {
   "version": 2,
-  "dgSpecHash": "LHa6CLaNt6oiOYYJWfuwUwT9zKTLwlrDWF2l4iLTXaWodLJkA1pk7mpOG6zwEkyXlqZs3dlFvDP80LF9cYG9iw==",
+  "dgSpecHash": "ZtBp8mqLItL3x3mF93UTw5y2pJj+YfqckJUvRtnaJ+7VZYNo1YN258QgZMw8TvQ9//FOUVOnmhPpigMdywCTsQ==",
   "success": true,
   "projectFilePath": "/home/ayub/Documents/GitHub/H10-Framework/src/H10.Data/H10.Data.csproj",
   "expectedPackageFiles": [
+    "/home/ayub/.nuget/packages/microsoft.csharp/4.7.0/microsoft.csharp.4.7.0.nupkg.sha512",
     "/home/ayub/.nuget/packages/microsoft.extensions.configuration/3.1.6/microsoft.extensions.configuration.3.1.6.nupkg.sha512",
     "/home/ayub/.nuget/packages/microsoft.extensions.configuration.abstractions/3.1.6/microsoft.extensions.configuration.abstractions.3.1.6.nupkg.sha512",
     "/home/ayub/.nuget/packages/microsoft.extensions.primitives/3.1.6/microsoft.extensions.primitives.3.1.6.nupkg.sha512",

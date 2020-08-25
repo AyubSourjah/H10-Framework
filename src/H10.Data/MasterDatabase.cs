@@ -48,6 +48,13 @@ namespace H10.Data
                 else throw new NotSupportedException("Database provider not supported");
             }
         }
+        public DbConnection GetConnection()
+        {
+            if (_masterConnection.State == ConnectionState.Closed)
+                _masterConnection.Open();
+            
+            return _masterConnection;
+        }
         public DbCommand CreateCommand()
         {
             if (_masterConnection.State == ConnectionState.Closed) 
