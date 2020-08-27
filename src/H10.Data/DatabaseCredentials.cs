@@ -10,7 +10,7 @@ namespace H10.Data
 
         public DatabaseCredentials(DbProviderFactory dbProviderFactory)
         {
-            _dbProviderFactory = dbProviderFactory;
+            _dbProviderFactory = dbProviderFactory ?? throw new ArgumentNullException(nameof(dbProviderFactory));
         }
         public string Server { get; set; }
         public string UserName { get; set; }

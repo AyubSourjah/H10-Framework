@@ -17,7 +17,7 @@ namespace H10.Data
 
         public TenantDatabase(TenantProvider tenantProvider)
         {
-            _tenantProvider = tenantProvider;
+            _tenantProvider = tenantProvider ?? throw new ArgumentNullException(nameof(tenantProvider));
             _tenantConnection = tenantProvider.GetTenantConnection();
             _masterConnection = tenantProvider.GetMasterConnection();
         }

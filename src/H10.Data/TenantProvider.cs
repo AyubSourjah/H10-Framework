@@ -1,8 +1,6 @@
 using System;
-using System.Collections;
 using System.Data;
 using System.Data.Common;
-using System.Data.SqlClient;
 using System.Diagnostics;
 using System.Linq;
 using H10.Data.Extensions;
@@ -21,8 +19,8 @@ namespace H10.Data
 
 		public TenantProvider(IConfiguration configuration, string domain)
 		{
-			if (string.IsNullOrEmpty(domain))
-				throw new ArgumentNullException("Domain name argument cannot be null or empty");
+			if (string.IsNullOrEmpty(domain)) 
+				throw new ArgumentNullException(nameof(domain),"Domain cannot be null");
 
 			_configuration = configuration;
 			_subDomain = Shared.DomainNameHandler.GetSubDomain(value: domain);
@@ -30,8 +28,7 @@ namespace H10.Data
 		}
 		internal DbConnection GetTenantConnection()
 		{
-			if (_tenantConnection != null)
-				return _tenantConnection;
+			if (_tenantConnection != null) return _tenantConnection;
 			
 			using var cnn = GetMasterConnection();
 			using var cmd = cnn.CreateCommand();
@@ -54,15 +51,15 @@ namespace H10.Data
 
 			_tenantConnection = _dbProviderFactory.CreateConnection();
 			
-			Debug.Assert(_tenantConnection != null, nameof(_tenantConnection) + " != null");
+			Debug.Assert(_tenantConnection != null, nameof(_tenantConnection) + " cannot be null");
 			_tenantConnection.ConnectionString = credentials.BuildConnectionString();
+			_tenantConnection.Open();
 			
 			return _tenantConnection;
 		}
 		internal DbConnection GetMasterConnection()
 		{
-			if (_masterConnection != null)
-				return _masterConnection;
+			if (_masterConnection != null) return _masterConnection;
 			
 			var credentials = new DatabaseCredentials(_dbProviderFactory)
 			{
@@ -72,11 +69,12 @@ namespace H10.Data
 				Server = _configuration[SettingKeys.RepositoryServer]
 			};
 
-			Debug.Assert(_dbProviderFactory != null, nameof(_dbProviderFactory) + " != null");
+			Debug.Assert(_dbProviderFactory != null, nameof(_dbProviderFactory) + " cannot be null");
 			_masterConnection = _dbProviderFactory.CreateConnection();
 			
-			Debug.Assert(_masterConnection != null, nameof(_masterConnection) + " != null");
+			Debug.Assert(_masterConnection != null, nameof(_masterConnection) + " cannot be null");
 			_masterConnection.ConnectionString = credentials.BuildConnectionString();
+			_masterConnection.Open();
 			
 			return _masterConnection;
 		}
