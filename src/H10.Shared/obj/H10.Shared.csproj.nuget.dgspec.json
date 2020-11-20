@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "/home/ayub/Documents/GitHub/H10-Framework/src/H10.Shared/H10.Shared.csproj": {}
+    "/home/ayub/GitHubProjects/H10-Framework/src/H10.Shared/H10.Shared.csproj": {}
   },
   "projects": {
-    "/home/ayub/Documents/GitHub/H10-Framework/src/H10.Shared/H10.Shared.csproj": {
+    "/home/ayub/GitHubProjects/H10-Framework/src/H10.Shared/H10.Shared.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/home/ayub/Documents/GitHub/H10-Framework/src/H10.Shared/H10.Shared.csproj",
+        "projectUniqueName": "/home/ayub/GitHubProjects/H10-Framework/src/H10.Shared/H10.Shared.csproj",
         "projectName": "H10.Shared",
-        "projectPath": "/home/ayub/Documents/GitHub/H10-Framework/src/H10.Shared/H10.Shared.csproj",
+        "projectPath": "/home/ayub/GitHubProjects/H10-Framework/src/H10.Shared/H10.Shared.csproj",
         "packagesPath": "/home/ayub/.nuget/packages/",
-        "outputPath": "/home/ayub/Documents/GitHub/H10-Framework/src/H10.Shared/obj/",
+        "outputPath": "/home/ayub/GitHubProjects/H10-Framework/src/H10.Shared/obj/",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "/home/ayub/.nuget/NuGet/NuGet.Config"
@@ -24,6 +24,7 @@
         },
         "frameworks": {
           "netstandard2.1": {
+            "targetAlias": "netstandard2.1",
             "projectReferences": {}
           }
         },
@@ -35,6 +36,7 @@
       },
       "frameworks": {
         "netstandard2.1": {
+          "targetAlias": "netstandard2.1",
           "dependencies": {
             "Microsoft.CSharp": {
               "target": "Package",
@@ -60,7 +62,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "/usr/share/dotnet/sdk/3.1.401/RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "/usr/share/dotnet/sdk/5.0.100/RuntimeIdentifierGraph.json"
         }
       }
     }

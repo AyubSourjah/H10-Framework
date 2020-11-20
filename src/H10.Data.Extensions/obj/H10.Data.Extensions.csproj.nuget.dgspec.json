@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "/home/ayub/Documents/GitHub/H10-Framework/src/H10.Data.Extensions/H10.Data.Extensions.csproj": {}
+    "/home/ayub/GitHubProjects/H10-Framework/src/H10.Data.Extensions/H10.Data.Extensions.csproj": {}
   },
   "projects": {
-    "/home/ayub/Documents/GitHub/H10-Framework/src/H10.Data.Extensions/H10.Data.Extensions.csproj": {
+    "/home/ayub/GitHubProjects/H10-Framework/src/H10.Data.Extensions/H10.Data.Extensions.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/home/ayub/Documents/GitHub/H10-Framework/src/H10.Data.Extensions/H10.Data.Extensions.csproj",
+        "projectUniqueName": "/home/ayub/GitHubProjects/H10-Framework/src/H10.Data.Extensions/H10.Data.Extensions.csproj",
         "projectName": "H10.Data.Extensions",
-        "projectPath": "/home/ayub/Documents/GitHub/H10-Framework/src/H10.Data.Extensions/H10.Data.Extensions.csproj",
+        "projectPath": "/home/ayub/GitHubProjects/H10-Framework/src/H10.Data.Extensions/H10.Data.Extensions.csproj",
         "packagesPath": "/home/ayub/.nuget/packages/",
-        "outputPath": "/home/ayub/Documents/GitHub/H10-Framework/src/H10.Data.Extensions/obj/",
+        "outputPath": "/home/ayub/GitHubProjects/H10-Framework/src/H10.Data.Extensions/obj/",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "/home/ayub/.nuget/NuGet/NuGet.Config"
@@ -24,6 +24,7 @@
         },
         "frameworks": {
           "netstandard2.1": {
+            "targetAlias": "netstandard2.1",
             "projectReferences": {}
           }
         },
@@ -35,6 +36,7 @@
       },
       "frameworks": {
         "netstandard2.1": {
+          "targetAlias": "netstandard2.1",
           "dependencies": {
             "Microsoft.CSharp": {
               "target": "Package",
@@ -56,7 +58,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "/usr/share/dotnet/sdk/3.1.401/RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "/usr/share/dotnet/sdk/5.0.100/RuntimeIdentifierGraph.json"
         }
       }
     }

@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "8TE3+DuSt/jwvE9R51hu4/KX5GL/XSnU7uAnakVy9l56bDj4UFsPsTUfH/cEPGxJtJugWFeszG3geCzjpp2zzQ==",
+  "dgSpecHash": "X8rufpsu3+8ij/7BUUbYQt4F0oMzItkhMVuZjyVKjAVMazN0R+gfsSx9hpdAtJyp+oKuGuQpvg/PtPQVGA2XyQ==",
   "success": true,
-  "projectFilePath": "/home/ayub/Documents/GitHub/H10-Framework/src/H10.Shared/H10.Shared.csproj",
+  "projectFilePath": "/home/ayub/GitHubProjects/H10-Framework/src/H10.Shared/H10.Shared.csproj",
   "expectedPackageFiles": [
     "/home/ayub/.nuget/packages/microsoft.csharp/4.7.0/microsoft.csharp.4.7.0.nupkg.sha512",
     "/home/ayub/.nuget/packages/microsoft.extensions.configuration/3.1.6/microsoft.extensions.configuration.3.1.6.nupkg.sha512",

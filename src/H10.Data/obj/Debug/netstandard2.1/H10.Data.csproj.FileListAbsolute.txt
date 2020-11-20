@@ -36,3 +36,17 @@ D:/GitHub/H10-Framework/src/H10.Data/obj/Debug/netstandard2.1/H10.Data.pdb
 /home/ayub/Documents/GitHub/H10-Framework/src/H10.Data/obj/Debug/netstandard2.1/H10.Data.pdb
 /home/ayub/Documents/GitHub/H10-Framework/src/H10.Data/bin/Debug/netstandard2.1/H10.Data.Extensions.dll
 /home/ayub/Documents/GitHub/H10-Framework/src/H10.Data/bin/Debug/netstandard2.1/H10.Data.Extensions.pdb
+/home/ayub/GitHubProjects/H10-Framework/src/H10.Data/bin/Debug/netstandard2.1/H10.Data.deps.json
+/home/ayub/GitHubProjects/H10-Framework/src/H10.Data/bin/Debug/netstandard2.1/H10.Data.dll
+/home/ayub/GitHubProjects/H10-Framework/src/H10.Data/bin/Debug/netstandard2.1/H10.Data.pdb
+/home/ayub/GitHubProjects/H10-Framework/src/H10.Data/bin/Debug/netstandard2.1/H10.Data.Extensions.dll
+/home/ayub/GitHubProjects/H10-Framework/src/H10.Data/bin/Debug/netstandard2.1/H10.Shared.dll
+/home/ayub/GitHubProjects/H10-Framework/src/H10.Data/bin/Debug/netstandard2.1/H10.Data.Extensions.pdb
+/home/ayub/GitHubProjects/H10-Framework/src/H10.Data/bin/Debug/netstandard2.1/H10.Shared.pdb
+/home/ayub/GitHubProjects/H10-Framework/src/H10.Data/obj/Debug/netstandard2.1/H10.Data.csprojAssemblyReference.cache
+/home/ayub/GitHubProjects/H10-Framework/src/H10.Data/obj/Debug/netstandard2.1/H10.Data.AssemblyInfoInputs.cache
+/home/ayub/GitHubProjects/H10-Framework/src/H10.Data/obj/Debug/netstandard2.1/H10.Data.AssemblyInfo.cs
+/home/ayub/GitHubProjects/H10-Framework/src/H10.Data/obj/Debug/netstandard2.1/H10.Data.csproj.CoreCompileInputs.cache
+/home/ayub/GitHubProjects/H10-Framework/src/H10.Data/obj/Debug/netstandard2.1/H10.Data.csproj.CopyComplete
+/home/ayub/GitHubProjects/H10-Framework/src/H10.Data/obj/Debug/netstandard2.1/H10.Data.dll
+/home/ayub/GitHubProjects/H10-Framework/src/H10.Data/obj/Debug/netstandard2.1/H10.Data.pdb
