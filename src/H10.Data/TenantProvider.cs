@@ -84,10 +84,17 @@ namespace H10.Data
 			{
 				if (disposing)
 				{
-					_masterConnection.Close();
-					_masterConnection.Dispose();
-					_tenantConnection.Close();
-					_tenantConnection.Dispose();
+					if (_masterConnection != null)
+					{
+						_masterConnection.Close();
+						_masterConnection.Dispose();
+					}
+
+					if (_tenantConnection != null)
+					{
+						_tenantConnection.Close();
+						_tenantConnection.Dispose();	
+					}
 				}
 
 				_disposedValue = true;

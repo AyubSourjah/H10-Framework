@@ -32,8 +32,7 @@ namespace H10.Data
             {
                 if (disposing)
                 {
-                    _tenantProvider.Dispose();
-                    _masterConnection.Dispose();
+                    
                 }
 
                 _disposedValue = true;
