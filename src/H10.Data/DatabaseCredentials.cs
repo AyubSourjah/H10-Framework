@@ -25,7 +25,7 @@ namespace H10.Data
                 dbConnectionStringBuilder[SqlKeys.Database] = this.Database;
                 dbConnectionStringBuilder[SqlKeys.UserName] = this.UserName;
                 dbConnectionStringBuilder[SqlKeys.Password] = this.Password;
-                dbConnectionStringBuilder[SqlKeys.Trusted] = "True";
+                //dbConnectionStringBuilder[SqlKeys.Trusted] = "True";
 
                 return dbConnectionStringBuilder.ConnectionString;
             }
