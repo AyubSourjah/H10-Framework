@@ -32,8 +32,9 @@ namespace H10.Data
         internal DbConnection GetTenantConnection()
         {
             if (_tenantConnection != null) return _tenantConnection;
-
+            
             var cnn = GetMasterConnection();
+            
             using var cmd = cnn.CreateCommand();
 
             cmd.CommandType = CommandType.StoredProcedure;
