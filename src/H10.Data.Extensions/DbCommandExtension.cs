@@ -21,6 +21,8 @@ namespace H10.Data.Extensions
             parameter.DbType = parameterType;
             parameter.Value = value;
             parameter.Direction = ParameterDirection.Input;
+
+            dbCommand.Parameters.Add(parameter);
         }
         public static IEnumerable<dynamic> GetRows(this IDbCommand dbCommand)
         {

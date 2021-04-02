@@ -33,12 +33,12 @@ namespace H10.Data
         {
             if (_tenantConnection != null) return _tenantConnection;
 
-            using var cnn = GetMasterConnection();
+            var cnn = GetMasterConnection();
             using var cmd = cnn.CreateCommand();
 
             cmd.CommandType = CommandType.StoredProcedure;
             cmd.CommandText = "sp_GetClientRepositoryDetails";
-            cmd.AddParameter("Domain", DbType.String, _subDomain);
+            cmd.AddParameter("@paramDomain", DbType.String, _subDomain);
 
             var row = cmd.GetRows()?.SingleOrDefault();
             if (row == null)
@@ -46,10 +46,11 @@ namespace H10.Data
 
             var credentials = new DatabaseCredentials(_dbProviderFactory)
             {
-                Database = row["Database"],
-                UserName = row["UserName"],
-                Password = row["Password"],
-                Server = row["ServerName"]
+                Database = row.Database,
+                UserName = row.UserName,
+                Password = row.Password,
+                Server = row.Servername,
+                Schema = row.Schema
             };
 
             _tenantConnection = _dbProviderFactory.CreateConnection();
