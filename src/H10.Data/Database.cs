@@ -52,7 +52,7 @@ namespace H10.Data
             {
                 if (disposing)
                 {
-                    //Tenant and Master database connections to be disposed by the Tenant Provider
+                    //Tenant and Master database connections to be disposed by the Database Provider Class
                 }
 
                 _disposedValue = true;
