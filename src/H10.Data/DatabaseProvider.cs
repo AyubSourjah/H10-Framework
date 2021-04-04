@@ -29,6 +29,16 @@ namespace H10.Data
             _dbProviderFactory = DbProviderFactories.GetFactory(_configuration[SettingKeys.RepositoryProvider]);
         }
 
+        public void SetClaimsContext(System.Security.Claims.ClaimsPrincipal cp)
+        {
+            string DBUsername = cp.Claims
+                ?.FirstOrDefault(x => x.Type.Equals("DBUserName", StringComparison.OrdinalIgnoreCase))?.Value;
+            string DBPassword = cp.Claims
+                ?.FirstOrDefault(x => x.Type.Equals("DBPassword", StringComparison.OrdinalIgnoreCase))?.Value;
+            
+            
+        }
+
         internal DbConnection GetTenantConnection()
         {
             if (_tenantConnection != null) return _tenantConnection;
