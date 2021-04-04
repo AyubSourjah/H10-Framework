@@ -23,5 +23,10 @@ namespace H10.Security
         {
             return String.Empty;
         }
+
+        public string GetHMAC(string value)
+        {
+            return string.Empty;
+        }
     }
 }
