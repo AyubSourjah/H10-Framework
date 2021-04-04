@@ -1,0 +1,60 @@
+{
+  "format": 1,
+  "restore": {
+    "/home/ayub/GitHubProjects/H10-Framework/src/H10.Security/H10.Security.csproj": {}
+  },
+  "projects": {
+    "/home/ayub/GitHubProjects/H10-Framework/src/H10.Security/H10.Security.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "/home/ayub/GitHubProjects/H10-Framework/src/H10.Security/H10.Security.csproj",
+        "projectName": "H10.Security",
+        "projectPath": "/home/ayub/GitHubProjects/H10-Framework/src/H10.Security/H10.Security.csproj",
+        "packagesPath": "/home/ayub/.nuget/packages/",
+        "outputPath": "/home/ayub/GitHubProjects/H10-Framework/src/H10.Security/obj/",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "/home/ayub/.nuget/NuGet/NuGet.Config"
+        ],
+        "originalTargetFrameworks": [
+          "net5.0"
+        ],
+        "sources": {
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net5.0": {
+            "targetAlias": "net5.0",
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net5.0": {
+          "targetAlias": "net5.0",
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "/usr/share/dotnet/sdk/5.0.201/RuntimeIdentifierGraph.json"
+        }
+      }
+    }
+  }
+}
