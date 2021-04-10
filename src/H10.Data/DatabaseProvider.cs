@@ -19,6 +19,9 @@ namespace H10.Data
         private readonly DbProviderFactory _dbProviderFactory;
         private readonly string _subDomain;
 
+        public string UserDbUsername { get; private set; }
+        public string UserDbPassword { get; private set; }
+
         public DatabaseProvider(IConfiguration configuration, string domain)
         {
             if (string.IsNullOrEmpty(domain))
@@ -31,12 +34,17 @@ namespace H10.Data
 
         public void SetClaimsContext(System.Security.Claims.ClaimsPrincipal cp)
         {
-            string DBUsername = cp.Claims
+            UserDbUsername = cp.Claims
                 ?.FirstOrDefault(x => x.Type.Equals("DBUserName", StringComparison.OrdinalIgnoreCase))?.Value;
-            string DBPassword = cp.Claims
+            UserDbPassword = cp.Claims
                 ?.FirstOrDefault(x => x.Type.Equals("DBPassword", StringComparison.OrdinalIgnoreCase))?.Value;
-            
-            
+
+            if (_tenantConnection != null)
+            {
+                _tenantConnection.Close();
+                _tenantConnection.Dispose();
+                _tenantConnection = null;   
+            }
         }
 
         internal DbConnection GetTenantConnection()
@@ -58,8 +66,8 @@ namespace H10.Data
             var credentials = new DatabaseCredentials(_dbProviderFactory)
             {
                 Database = row.Database,
-                UserName = row.UserName,
-                Password = row.Password,
+                UserName = this.UserDbUsername ?? row.UserName,
+                Password = this.UserDbPassword ?? row.Password,
                 Server = row.Servername,
                 Schema = row.Schema
             };
