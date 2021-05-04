@@ -1,0 +1,12 @@
+/home/ayub/GitHubProjects/H10-Framework/src/H10.Security/bin/Debug/net5.0/H10.Security.deps.json
+/home/ayub/GitHubProjects/H10-Framework/src/H10.Security/bin/Debug/net5.0/H10.Security.dll
+/home/ayub/GitHubProjects/H10-Framework/src/H10.Security/bin/Debug/net5.0/ref/H10.Security.dll
+/home/ayub/GitHubProjects/H10-Framework/src/H10.Security/bin/Debug/net5.0/H10.Security.pdb
+/home/ayub/GitHubProjects/H10-Framework/src/H10.Security/obj/Debug/net5.0/H10.Security.csprojAssemblyReference.cache
+/home/ayub/GitHubProjects/H10-Framework/src/H10.Security/obj/Debug/net5.0/H10.Security.GeneratedMSBuildEditorConfig.editorconfig
+/home/ayub/GitHubProjects/H10-Framework/src/H10.Security/obj/Debug/net5.0/H10.Security.AssemblyInfoInputs.cache
+/home/ayub/GitHubProjects/H10-Framework/src/H10.Security/obj/Debug/net5.0/H10.Security.AssemblyInfo.cs
+/home/ayub/GitHubProjects/H10-Framework/src/H10.Security/obj/Debug/net5.0/H10.Security.csproj.CoreCompileInputs.cache
+/home/ayub/GitHubProjects/H10-Framework/src/H10.Security/obj/Debug/net5.0/H10.Security.dll
+/home/ayub/GitHubProjects/H10-Framework/src/H10.Security/obj/Debug/net5.0/ref/H10.Security.dll
+/home/ayub/GitHubProjects/H10-Framework/src/H10.Security/obj/Debug/net5.0/H10.Security.pdb
