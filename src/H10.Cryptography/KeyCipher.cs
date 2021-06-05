@@ -18,7 +18,7 @@ namespace H10.Cryptography
 
         public KeyCipher(IConfiguration configuration)
         {
-            _configuration = configuration;
+            _configuration = configuration ?? throw new ArgumentNullException(nameof(configuration));
             _keyVaultUri = configuration["Azure:KeyVault_Uri"];
             _keyVaultKeyName = configuration["Azure:KeyVault_KeyName"];
 
@@ -27,18 +27,18 @@ namespace H10.Cryptography
 
         public KeyCipher(IConfiguration configuration, string keyVaultUri, string keyVaultKeyName)
         {
-            _configuration = configuration;
-            _keyVaultUri = keyVaultUri;
-            _keyVaultKeyName = keyVaultKeyName;
+            _configuration = configuration ?? throw new ArgumentNullException(nameof(configuration));
+            _keyVaultUri = keyVaultUri ?? throw new ArgumentNullException(nameof(keyVaultUri));
+            _keyVaultKeyName = keyVaultKeyName ?? throw new ArgumentNullException(nameof(keyVaultKeyName));
             
             this.DefaultInit();
         }
 
         public KeyCipher(IConfiguration configuration, string keyVaultKeyName)
         {
-            _configuration = configuration;
+            _configuration = configuration ?? throw new ArgumentNullException(nameof(configuration));
             _keyVaultUri = configuration["Azure:KeyVault_Uri"];
-            _keyVaultKeyName = keyVaultKeyName;
+            _keyVaultKeyName = keyVaultKeyName ?? throw new ArgumentNullException(nameof(keyVaultKeyName));
             
             this.DefaultInit();
         }
