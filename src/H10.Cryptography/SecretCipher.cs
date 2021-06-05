@@ -43,10 +43,10 @@ namespace H10.Cryptography
             this.DefaultInit();
         }
 
-        protected async void DefaultInit()
+        protected void DefaultInit()
         {
             var secretClient = new SecretClient(new Uri(_keyVaultUri), new DefaultAzureCredential());
-            _keyVaultSecret = await secretClient.GetSecretAsync(_keyVaultSecretName);
+            _keyVaultSecret = secretClient.GetSecret(_keyVaultSecretName);
         }
         
         public string Encode(string value)

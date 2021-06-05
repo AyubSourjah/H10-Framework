@@ -43,34 +43,34 @@ namespace H10.Cryptography
             this.DefaultInit();
         }
 
-        protected async void DefaultInit()
+        protected void DefaultInit()
         {
             var keyClient = new KeyClient(new Uri(_keyVaultUri), new DefaultAzureCredential());
-            await keyClient.CreateRsaKeyAsync(new CreateRsaKeyOptions(_keyVaultKeyName));
+            keyClient.CreateRsaKey(new CreateRsaKeyOptions(_keyVaultKeyName));
 
-            KeyVaultKey key = await keyClient.GetKeyAsync(_keyVaultKeyName);
+            KeyVaultKey key = keyClient.GetKey(_keyVaultKeyName);
             _cryptoClient = new CryptographyClient(key.Id, new DefaultAzureCredential());
         }
 
-        public async Task<string> Encode(string value)
+        public string Encode(string value)
         {
             if (string.IsNullOrEmpty(value))
                 throw new ArgumentException("Value cannot be null or empty.", nameof(value));
 
             byte[] valueByteArray = Encoding.UTF8.GetBytes(value);
-            EncryptResult encryptResult = await _cryptoClient.EncryptAsync(EncryptionAlgorithm.RsaOaep, valueByteArray);
+            EncryptResult encryptResult = _cryptoClient.Encrypt(EncryptionAlgorithm.RsaOaep, valueByteArray);
 
             return Convert.ToBase64String(encryptResult.Ciphertext);
         }
 
-        public async Task<string> Decode(string value)
+        public string Decode(string value)
         {
             if (string.IsNullOrEmpty(value))
                 throw new ArgumentException("Value cannot be null or empty.", nameof(value));
 
             byte[] encryptedByteArray = Convert.FromBase64String(value);
             DecryptResult decryptResult =
-                await _cryptoClient.DecryptAsync(EncryptionAlgorithm.RsaOaep, encryptedByteArray);
+                _cryptoClient.Decrypt(EncryptionAlgorithm.RsaOaep, encryptedByteArray);
 
             return Encoding.Default.GetString(decryptResult.Plaintext);
         }
