@@ -45,7 +45,13 @@ namespace H10.Cryptography
 
         protected void DefaultInit()
         {
-            var secretClient = new SecretClient(new Uri(_keyVaultUri), new DefaultAzureCredential());
+            string tenantId = _configuration["Azure:Tenant_ID"];
+            string clientId = _configuration["Azure:Client_ID"];
+            string clientSecret = _configuration["Azure:Client_Secret"];
+
+            var clientCredentials = new ClientSecretCredential(tenantId, clientId, clientSecret);
+            
+            var secretClient = new SecretClient(new Uri(_keyVaultUri), clientCredentials);
             _keyVaultSecret = secretClient.GetSecret(_keyVaultSecretName);
         }
         

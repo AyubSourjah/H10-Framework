@@ -45,7 +45,13 @@ namespace H10.Cryptography
 
         protected void DefaultInit()
         {
-            var keyClient = new KeyClient(new Uri(_keyVaultUri), new DefaultAzureCredential());
+            string tenantId = _configuration["Azure:Tenant_ID"];
+            string clientId = _configuration["Azure:Client_ID"];
+            string clientSecret = _configuration["Azure:Client_Secret"];
+
+            var clientCredentials = new ClientSecretCredential(tenantId, clientId, clientSecret);
+            
+            var keyClient = new KeyClient(new Uri(_keyVaultUri), clientCredentials);
             keyClient.CreateRsaKey(new CreateRsaKeyOptions(_keyVaultKeyName));
 
             KeyVaultKey key = keyClient.GetKey(_keyVaultKeyName);
