@@ -37,6 +37,9 @@ namespace H10.Data
                     command = _tenantConnection.CreateCommand();
                     break;
                 case TargetEnvironment.User:
+                    //NOTE: Kept for future enhancement support. The developer needs to call the SetClaimsContext
+                    //on the DatabaseProvider class instance to initialize the
+                    //connection to a specific users group db account
                     command = _tenantConnection.CreateCommand();
                     break;
                 default:
