@@ -65,7 +65,7 @@ namespace H10.Cryptography
             byte[] encrypted;
             byte[] iv;
 
-            using (AesCryptoServiceProvider aesAlg = new AesCryptoServiceProvider())
+            using (var aesAlg = Aes.Create())
             {
                 aesAlg.KeySize = 256;
                 aesAlg.BlockSize = 128;
@@ -114,29 +114,26 @@ namespace H10.Cryptography
 
             string plaintext = null;
 
-            using (AesCryptoServiceProvider aesAlg = new AesCryptoServiceProvider())
-            {                                
-                using (MemoryStream msDecrypt = new MemoryStream(cipherText))
+            using var aesAlg = Aes.Create();
+            using MemoryStream msDecrypt = new MemoryStream(cipherText);
+            
+            msDecrypt.Read(iv, 0, 16);
+
+            aesAlg.KeySize = 256;
+            aesAlg.BlockSize = 128;
+
+            aesAlg.Mode = CipherMode.CBC;
+            aesAlg.Padding = PaddingMode.PKCS7;
+            aesAlg.Key = key;
+            aesAlg.IV = iv;
+
+            ICryptoTransform decryptor = aesAlg.CreateDecryptor(aesAlg.Key, aesAlg.IV);
+
+            using (CryptoStream csDecrypt = new CryptoStream(msDecrypt, decryptor, CryptoStreamMode.Read))
+            {
+                using (StreamReader srDecrypt = new StreamReader(csDecrypt))
                 {
-                    msDecrypt.Read(iv, 0, 16);
-
-                    aesAlg.KeySize = 256;
-                    aesAlg.BlockSize = 128;
-
-                    aesAlg.Mode = CipherMode.CBC;
-                    aesAlg.Padding = PaddingMode.PKCS7;
-                    aesAlg.Key = key;
-                    aesAlg.IV = iv;
-
-                    ICryptoTransform decryptor = aesAlg.CreateDecryptor(aesAlg.Key, aesAlg.IV);
-
-                    using (CryptoStream csDecrypt = new CryptoStream(msDecrypt, decryptor, CryptoStreamMode.Read))
-                    {
-                        using (StreamReader srDecrypt = new StreamReader(csDecrypt))
-                        {
-                            plaintext = srDecrypt.ReadToEnd();
-                        }
-                    }
+                    plaintext = srDecrypt.ReadToEnd();
                 }
             }
 

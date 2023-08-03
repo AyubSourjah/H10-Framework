@@ -1,4 +1,5 @@
 using System;
+using System.Data;
 using System.Data.Common;
 
 namespace H10.Data
@@ -40,6 +41,9 @@ namespace H10.Data
                     //NOTE: Kept for future enhancement support. The developer needs to call the SetClaimsContext
                     //on the DatabaseProvider class instance to initialize the
                     //connection to a specific users group db account
+                    if (_tenantConnection.State == ConnectionState.Closed)
+                        _tenantConnection.Open();
+                    
                     command = _tenantConnection.CreateCommand();
                     break;
                 default:
