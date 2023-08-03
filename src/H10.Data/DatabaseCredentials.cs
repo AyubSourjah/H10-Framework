@@ -16,8 +16,8 @@ namespace H10.Data
         public string? UserName { get; set; }
         public string? Password { get; set; }
         public string? Database { get; set; }
-        public string Schema { get; set; }
-        public string BuildConnectionString()
+        public string? Schema { get; set; }
+        public string? BuildConnectionString()
         {
             var dbConnectionStringBuilder = _dbProviderFactory.CreateConnectionStringBuilder();
             if (dbConnectionStringBuilder is SqlConnectionStringBuilder)

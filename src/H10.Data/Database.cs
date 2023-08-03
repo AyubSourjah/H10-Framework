@@ -27,7 +27,7 @@ namespace H10.Data
 
         public DbCommand CreateCommand(TargetEnvironment targetEnvironment = TargetEnvironment.User)
         {
-            DbCommand command = null;
+            DbCommand? command = null;
 
             switch (targetEnvironment)
             {
