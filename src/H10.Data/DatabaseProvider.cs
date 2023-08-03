@@ -29,7 +29,10 @@ namespace H10.Data
 
             _configuration = configuration;
             _subDomain = Shared.DomainNameHandler.GetSubDomain(value: domain);
-            _dbProviderFactory = DbProviderFactories.GetFactory(_configuration[SettingKeys.RepositoryProvider] ?? string.Empty);
+            
+            if (DbProviderFactories.TryGetFactory(_configuration[SettingKeys.RepositoryProvider]!,
+                    out _dbProviderFactory!) == false)
+                throw new InvalidOperationException("Unable to resolve db provider by factory");
         }
 
         public void SetClaimsContext(System.Security.Claims.ClaimsPrincipal cp)
