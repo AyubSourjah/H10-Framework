@@ -1,11 +1,11 @@
 {
   "version": 3,
   "targets": {
-    "net5.0": {}
+    "net6.0": {}
   },
   "libraries": {},
   "projectFileDependencyGroups": {
-    "net5.0": []
+    "net6.0": []
   },
   "packageFolders": {
     "/home/ayub/.nuget/packages/": {}
@@ -13,24 +13,24 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "/home/ayub/GitHubProjects/H10-Framework/src/H10.Security/H10.Security.csproj",
+      "projectUniqueName": "/media/ayub/data/GitProjects/H10-Framework/src/H10.Security/H10.Security.csproj",
       "projectName": "H10.Security",
-      "projectPath": "/home/ayub/GitHubProjects/H10-Framework/src/H10.Security/H10.Security.csproj",
+      "projectPath": "/media/ayub/data/GitProjects/H10-Framework/src/H10.Security/H10.Security.csproj",
       "packagesPath": "/home/ayub/.nuget/packages/",
-      "outputPath": "/home/ayub/GitHubProjects/H10-Framework/src/H10.Security/obj/",
+      "outputPath": "/media/ayub/data/GitProjects/H10-Framework/src/H10.Security/obj/",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "/home/ayub/.nuget/NuGet/NuGet.Config"
       ],
       "originalTargetFrameworks": [
-        "net5.0"
+        "net6.0"
       ],
       "sources": {
         "https://api.nuget.org/v3/index.json": {}
       },
       "frameworks": {
-        "net5.0": {
-          "targetAlias": "net5.0",
+        "net6.0": {
+          "targetAlias": "net6.0",
           "projectReferences": {}
         }
       },
@@ -41,15 +41,16 @@
       }
     },
     "frameworks": {
-      "net5.0": {
-        "targetAlias": "net5.0",
+      "net6.0": {
+        "targetAlias": "net6.0",
         "imports": [
           "net461",
           "net462",
           "net47",
           "net471",
           "net472",
-          "net48"
+          "net48",
+          "net481"
         ],
         "assetTargetFallback": true,
         "warn": true,
@@ -58,7 +59,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "/usr/share/dotnet/sdk/5.0.401/RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "/usr/lib/dotnet/sdk/7.0.109/RuntimeIdentifierGraph.json"
       }
     }
   }

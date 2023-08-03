@@ -1,30 +1,30 @@
 {
   "format": 1,
   "restore": {
-    "/home/ayub/GitHubProjects/H10-Framework/src/H10.Shared/H10.Shared.csproj": {}
+    "/media/ayub/data/GitProjects/H10-Framework/src/H10.Shared/H10.Shared.csproj": {}
   },
   "projects": {
-    "/home/ayub/GitHubProjects/H10-Framework/src/H10.Shared/H10.Shared.csproj": {
+    "/media/ayub/data/GitProjects/H10-Framework/src/H10.Shared/H10.Shared.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/home/ayub/GitHubProjects/H10-Framework/src/H10.Shared/H10.Shared.csproj",
+        "projectUniqueName": "/media/ayub/data/GitProjects/H10-Framework/src/H10.Shared/H10.Shared.csproj",
         "projectName": "H10.Shared",
-        "projectPath": "/home/ayub/GitHubProjects/H10-Framework/src/H10.Shared/H10.Shared.csproj",
+        "projectPath": "/media/ayub/data/GitProjects/H10-Framework/src/H10.Shared/H10.Shared.csproj",
         "packagesPath": "/home/ayub/.nuget/packages/",
-        "outputPath": "/home/ayub/GitHubProjects/H10-Framework/src/H10.Shared/obj/",
+        "outputPath": "/media/ayub/data/GitProjects/H10-Framework/src/H10.Shared/obj/",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "/home/ayub/.nuget/NuGet/NuGet.Config"
         ],
         "originalTargetFrameworks": [
-          "netstandard2.1"
+          "net6.0"
         ],
         "sources": {
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
-          "netstandard2.1": {
-            "targetAlias": "netstandard2.1",
+          "net6.0": {
+            "targetAlias": "net6.0",
             "projectReferences": {}
           }
         },
@@ -35,8 +35,8 @@
         }
       },
       "frameworks": {
-        "netstandard2.1": {
-          "targetAlias": "netstandard2.1",
+        "net6.0": {
+          "targetAlias": "net6.0",
           "dependencies": {
             "Microsoft.CSharp": {
               "target": "Package",
@@ -44,7 +44,7 @@
             },
             "Microsoft.Extensions.Configuration": {
               "target": "Package",
-              "version": "[3.1.6, )"
+              "version": "[7.0.0, )"
             }
           },
           "imports": [
@@ -53,16 +53,17 @@
             "net47",
             "net471",
             "net472",
-            "net48"
+            "net48",
+            "net481"
           ],
           "assetTargetFallback": true,
           "warn": true,
           "frameworkReferences": {
-            "NETStandard.Library": {
+            "Microsoft.NETCore.App": {
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "/usr/share/dotnet/sdk/5.0.401/RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "/usr/lib/dotnet/sdk/7.0.109/RuntimeIdentifierGraph.json"
         }
       }
     }
