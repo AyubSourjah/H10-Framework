@@ -20,7 +20,7 @@ namespace H10.Shared
 
         private void BuildConfiguration()
         {
-            string shellBaseUrl = this._configuration["Services/Shell/BaseUrl"];
+            var shellBaseUrl = this._configuration["Services/Shell/BaseUrl"];
         }
     }
 }

@@ -10,8 +10,8 @@ namespace H10.Data
 {
     public class DatabaseProvider : IDisposable
     {
-        private DbConnection _masterConnection = null;
-        private DbConnection _tenantConnection = null;
+        private DbConnection? _masterConnection = null;
+        private DbConnection? _tenantConnection = null;
 
         private bool _disposedValue;
 
@@ -19,8 +19,8 @@ namespace H10.Data
         private readonly DbProviderFactory _dbProviderFactory;
         private readonly string _subDomain;
 
-        public string UserDbUsername { get; private set; }
-        public string UserDbPassword { get; private set; }
+        public string? UserDbUsername { get; private set; }
+        public string? UserDbPassword { get; private set; }
 
         public DatabaseProvider(IConfiguration configuration, string domain)
         {
@@ -29,7 +29,7 @@ namespace H10.Data
 
             _configuration = configuration;
             _subDomain = Shared.DomainNameHandler.GetSubDomain(value: domain);
-            _dbProviderFactory = DbProviderFactories.GetFactory(_configuration[SettingKeys.RepositoryProvider]);
+            _dbProviderFactory = DbProviderFactories.GetFactory(_configuration[SettingKeys.RepositoryProvider] ?? string.Empty);
         }
 
         public void SetClaimsContext(System.Security.Claims.ClaimsPrincipal cp)

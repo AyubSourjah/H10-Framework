@@ -12,10 +12,10 @@ namespace H10.Data
         {
             _dbProviderFactory = dbProviderFactory ?? throw new ArgumentNullException(nameof(dbProviderFactory));
         }
-        public string Server { get; set; }
-        public string UserName { get; set; }
-        public string Password { get; set; }
-        public string Database { get; set; }
+        public string? Server { get; set; }
+        public string? UserName { get; set; }
+        public string? Password { get; set; }
+        public string? Database { get; set; }
         public string Schema { get; set; }
         public string BuildConnectionString()
         {
