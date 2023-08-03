@@ -47,7 +47,7 @@ namespace H10.Data
             }
         }
 
-        internal DbConnection GetTenantConnection()
+        public DbConnection GetTenantConnection()
         {
             if (_tenantConnection != null) return _tenantConnection;
             
@@ -81,7 +81,7 @@ namespace H10.Data
             return _tenantConnection;
         }
 
-        internal DbConnection GetMasterConnection()
+        public DbConnection GetMasterConnection()
         {
             if (_masterConnection != null) return _masterConnection;
 
