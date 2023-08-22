@@ -4,6 +4,7 @@ using System.Data.Common;
 using System.Diagnostics;
 using System.Linq;
 using H10.Data.Extensions;
+using Microsoft.AspNetCore.Http;
 using Microsoft.Extensions.Configuration;
 
 namespace H10.Data
@@ -22,13 +23,23 @@ namespace H10.Data
         public string? UserDbUsername { get; private set; }
         public string? UserDbPassword { get; private set; }
 
-        public DatabaseProvider(IConfiguration configuration, string domain)
+        public DatabaseProvider(IConfiguration configuration, string domain, DbProviderFactory dbProviderFactory)
         {
             if (string.IsNullOrEmpty(domain))
                 throw new ArgumentNullException(nameof(domain), "Domain cannot be null");
 
             _configuration = configuration;
             _subDomain = Shared.DomainNameHandler.GetSubDomain(value: domain);
+            _dbProviderFactory = dbProviderFactory;
+        }
+        
+        public DatabaseProvider(IConfiguration configuration, IHttpContextAccessor contextAccessor, DbProviderFactory dbProviderFactory)
+        {
+            var domain = contextAccessor.HttpContext?.Request?.Host.Value;
+            
+            _configuration = configuration;
+            _subDomain = Shared.DomainNameHandler.GetSubDomain(value: domain ?? "localhost");
+            _dbProviderFactory = dbProviderFactory;
             
             if (DbProviderFactories.TryGetFactory(_configuration[SettingKeys.RepositoryProvider]!,
                     out _dbProviderFactory!) == false)

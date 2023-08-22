@@ -9,6 +9,10 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <FrameworkReference Include="Microsoft.AspNetCore.App" />
+  </ItemGroup>
+
+  <ItemGroup>
     <PackageReference Include="Microsoft.CSharp" Version="4.7.0" />
     <PackageReference Include="Microsoft.Extensions.Configuration" Version="7.0.0" />
     <PackageReference Include="System.Data.Common" Version="4.3.0" />
@@ -19,5 +23,6 @@
     <ProjectReference Include="..\H10.Data.Extensions\H10.Data.Extensions.csproj" />
     <ProjectReference Include="..\H10.Shared\H10.Shared.csproj" />
   </ItemGroup>
-
+  
+  
 </Project>
