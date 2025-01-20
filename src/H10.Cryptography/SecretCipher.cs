@@ -10,13 +10,13 @@ namespace H10.Cryptography
 {
     public class SecretCipher
     {
-        private readonly IConfiguration _configuration;
-        private readonly string _keyVaultUri;
-        private readonly string _keyVaultSecretName;
+        private readonly IConfiguration? _configuration;
+        private readonly string? _keyVaultUri;
+        private readonly string? _keyVaultSecretName;
 
-        private KeyVaultSecret _keyVaultSecret;
+        private KeyVaultSecret? _keyVaultSecret;
         
-        public SecretCipher(IConfiguration configuration)
+        public SecretCipher(IConfiguration? configuration)
         {
             _configuration = configuration ?? throw new ArgumentNullException(nameof(configuration));
             _keyVaultUri = configuration["Azure:KeyVault_Uri"];
@@ -43,13 +43,15 @@ namespace H10.Cryptography
             this.DefaultInit();
         }
 
-        protected void DefaultInit()
+        private void DefaultInit()
         {
-            string tenantId = _configuration["Azure:Tenant_ID"];
-            string clientId = _configuration["Azure:Client_ID"];
-            string clientSecret = _configuration["Azure:Client_Secret"];
+            string? tenantId = _configuration?["Azure:Tenant_ID"];
+            string? clientId = _configuration?["Azure:Client_ID"];
+            string? clientSecret = _configuration?["Azure:Client_Secret"];
 
             var clientCredentials = new ClientSecretCredential(tenantId, clientId, clientSecret);
+
+            if (_keyVaultUri == null) return;
             
             var secretClient = new SecretClient(new Uri(_keyVaultUri), clientCredentials);
             _keyVaultSecret = secretClient.GetSecret(_keyVaultSecretName);
@@ -61,7 +63,7 @@ namespace H10.Cryptography
                 throw new ArgumentException("Value cannot be null or empty.", nameof(value));
 
             //Key should be of size 32bytes & iv should be of size 16bytes
-            byte[] key = Encoding.ASCII.GetBytes(_keyVaultSecret.Value.PadLeft(32));
+            byte[] key = Encoding.ASCII.GetBytes(_keyVaultSecret!.Value.PadLeft(32));
             byte[] encrypted;
             byte[] iv;
 
@@ -108,16 +110,16 @@ namespace H10.Cryptography
             string base64StringValue = Encoding.UTF8.GetString(base64Utfbytes);
 
             //Key should be of size 32bytes & iv should be of size 16bytes
-            byte[] key = Encoding.ASCII.GetBytes(_keyVaultSecret.Value.PadLeft(32));
+            byte[] key = Encoding.ASCII.GetBytes(_keyVaultSecret!.Value.PadLeft(32));
             byte[] cipherText = Convert.FromBase64String(base64StringValue);
             byte[] iv = new byte[16];
 
-            string plaintext = null;
+            string? plaintext = null;
 
             using var aesAlg = Aes.Create();
             using MemoryStream msDecrypt = new MemoryStream(cipherText);
             
-            msDecrypt.Read(iv, 0, 16);
+            msDecrypt.ReadExactly(iv, 0, 16);
 
             aesAlg.KeySize = 256;
             aesAlg.BlockSize = 128;
