@@ -8,7 +8,7 @@ namespace H10.Data;
 
 public static class DatabaseProviderExtension
 {
-    public static void AddJuraaDbService(this IServiceCollection services)
+    public static void AddPeoplesHrDbService(this IServiceCollection services)
     {
         services.TryAddScoped<DatabaseProvider>(sp =>
         {
