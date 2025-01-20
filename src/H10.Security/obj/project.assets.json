@@ -1,11 +1,11 @@
 {
   "version": 3,
   "targets": {
-    "net6.0": {}
+    "net9.0": {}
   },
   "libraries": {},
   "projectFileDependencyGroups": {
-    "net6.0": []
+    "net9.0": []
   },
   "packageFolders": {
     "/home/ayub/.nuget/packages/": {}
@@ -13,24 +13,25 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "/media/ayub/data/GitProjects/H10-Framework/src/H10.Security/H10.Security.csproj",
+      "projectUniqueName": "/home/ayub/Trunk/GitProjects/H10-Framework/src/H10.Security/H10.Security.csproj",
       "projectName": "H10.Security",
-      "projectPath": "/media/ayub/data/GitProjects/H10-Framework/src/H10.Security/H10.Security.csproj",
+      "projectPath": "/home/ayub/Trunk/GitProjects/H10-Framework/src/H10.Security/H10.Security.csproj",
       "packagesPath": "/home/ayub/.nuget/packages/",
-      "outputPath": "/media/ayub/data/GitProjects/H10-Framework/src/H10.Security/obj/",
+      "outputPath": "/home/ayub/Trunk/GitProjects/H10-Framework/src/H10.Security/obj/",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "/home/ayub/.nuget/NuGet/NuGet.Config"
       ],
       "originalTargetFrameworks": [
-        "net6.0"
+        "net9.0"
       ],
       "sources": {
+        "/usr/lib/dotnet/library-packs": {},
         "https://api.nuget.org/v3/index.json": {}
       },
       "frameworks": {
-        "net6.0": {
-          "targetAlias": "net6.0",
+        "net9.0": {
+          "targetAlias": "net9.0",
           "projectReferences": {}
         }
       },
@@ -38,11 +39,17 @@
         "warnAsError": [
           "NU1605"
         ]
-      }
+      },
+      "restoreAuditProperties": {
+        "enableAudit": "true",
+        "auditLevel": "low",
+        "auditMode": "direct"
+      },
+      "SdkAnalysisLevel": "9.0.100"
     },
     "frameworks": {
-      "net6.0": {
-        "targetAlias": "net6.0",
+      "net9.0": {
+        "targetAlias": "net9.0",
         "imports": [
           "net461",
           "net462",
@@ -59,7 +66,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "/usr/lib/dotnet/sdk/7.0.110/RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "/usr/lib/dotnet/sdk/9.0.102/PortableRuntimeIdentifierGraph.json"
       }
     }
   }

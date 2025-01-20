@@ -1,14 +1,13 @@
 {
   "version": 2,
-  "dgSpecHash": "Q7Jaj9M1qXUC6NcxwNFPP0blMp7AqtiGQ0Awo/sxu1bXcohN6tMKVGlpxn0OtZlJvt/0l5aZdMty7mzTmmArWQ==",
+  "dgSpecHash": "V0s5r10qVDg=",
   "success": true,
-  "projectFilePath": "/media/ayub/data/GitProjects/H10-Framework/src/H10.Shared/H10.Shared.csproj",
+  "projectFilePath": "/home/ayub/Trunk/GitProjects/H10-Framework/src/H10.Shared/H10.Shared.csproj",
   "expectedPackageFiles": [
     "/home/ayub/.nuget/packages/microsoft.csharp/4.7.0/microsoft.csharp.4.7.0.nupkg.sha512",
-    "/home/ayub/.nuget/packages/microsoft.extensions.configuration/7.0.0/microsoft.extensions.configuration.7.0.0.nupkg.sha512",
-    "/home/ayub/.nuget/packages/microsoft.extensions.configuration.abstractions/7.0.0/microsoft.extensions.configuration.abstractions.7.0.0.nupkg.sha512",
-    "/home/ayub/.nuget/packages/microsoft.extensions.primitives/7.0.0/microsoft.extensions.primitives.7.0.0.nupkg.sha512",
-    "/home/ayub/.nuget/packages/system.runtime.compilerservices.unsafe/6.0.0/system.runtime.compilerservices.unsafe.6.0.0.nupkg.sha512"
+    "/home/ayub/.nuget/packages/microsoft.extensions.configuration/9.0.1/microsoft.extensions.configuration.9.0.1.nupkg.sha512",
+    "/home/ayub/.nuget/packages/microsoft.extensions.configuration.abstractions/9.0.1/microsoft.extensions.configuration.abstractions.9.0.1.nupkg.sha512",
+    "/home/ayub/.nuget/packages/microsoft.extensions.primitives/9.0.1/microsoft.extensions.primitives.9.0.1.nupkg.sha512"
   ],
   "logs": []
 }

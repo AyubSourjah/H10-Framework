@@ -1,7 +1,7 @@
 {
   "version": 3,
   "targets": {
-    "net6.0": {
+    "net9.0": {
       "Microsoft.CSharp/4.7.0": {
         "type": "package",
         "compile": {
@@ -85,7 +85,7 @@
     }
   },
   "projectFileDependencyGroups": {
-    "net6.0": [
+    "net9.0": [
       "Microsoft.CSharp >= 4.7.0"
     ]
   },
@@ -95,24 +95,25 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "/media/ayub/data/GitProjects/H10-Framework/src/H10.Data.Extensions/H10.Data.Extensions.csproj",
+      "projectUniqueName": "/home/ayub/Trunk/GitProjects/H10-Framework/src/H10.Data.Extensions/H10.Data.Extensions.csproj",
       "projectName": "H10.Data.Extensions",
-      "projectPath": "/media/ayub/data/GitProjects/H10-Framework/src/H10.Data.Extensions/H10.Data.Extensions.csproj",
+      "projectPath": "/home/ayub/Trunk/GitProjects/H10-Framework/src/H10.Data.Extensions/H10.Data.Extensions.csproj",
       "packagesPath": "/home/ayub/.nuget/packages/",
-      "outputPath": "/media/ayub/data/GitProjects/H10-Framework/src/H10.Data.Extensions/obj/",
+      "outputPath": "/home/ayub/Trunk/GitProjects/H10-Framework/src/H10.Data.Extensions/obj/",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "/home/ayub/.nuget/NuGet/NuGet.Config"
       ],
       "originalTargetFrameworks": [
-        "net6.0"
+        "net9.0"
       ],
       "sources": {
+        "/usr/lib/dotnet/library-packs": {},
         "https://api.nuget.org/v3/index.json": {}
       },
       "frameworks": {
-        "net6.0": {
-          "targetAlias": "net6.0",
+        "net9.0": {
+          "targetAlias": "net9.0",
           "projectReferences": {}
         }
       },
@@ -120,11 +121,17 @@
         "warnAsError": [
           "NU1605"
         ]
-      }
+      },
+      "restoreAuditProperties": {
+        "enableAudit": "true",
+        "auditLevel": "low",
+        "auditMode": "direct"
+      },
+      "SdkAnalysisLevel": "9.0.100"
     },
     "frameworks": {
-      "net6.0": {
-        "targetAlias": "net6.0",
+      "net9.0": {
+        "targetAlias": "net9.0",
         "dependencies": {
           "Microsoft.CSharp": {
             "target": "Package",
@@ -147,7 +154,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "/usr/lib/dotnet/sdk/7.0.110/RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "/usr/lib/dotnet/sdk/9.0.102/PortableRuntimeIdentifierGraph.json"
       }
     }
   }
