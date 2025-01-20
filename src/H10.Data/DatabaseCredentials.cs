@@ -1,6 +1,6 @@
 using System;
 using System.Data.Common;
-using System.Data.SqlClient;
+using Microsoft.Data.SqlClient;
 
 namespace H10.Data
 {
