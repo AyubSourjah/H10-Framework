@@ -20,7 +20,7 @@ public static class DatabaseProviderExtension
         });
     }
     
-    public static void AddJuraaDbService(this IServiceCollection services, string domain)
+    public static void AddPeoplesHrDbService(this IServiceCollection services, string domain)
     {
         services.TryAddScoped<DatabaseProvider>(sp =>
         {
