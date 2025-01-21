@@ -9,7 +9,7 @@ namespace H10.Shared
             if (String.IsNullOrEmpty(value) == true)
                 throw new InvalidConstraintException("Unable to resolve subdomain without host information");
 
-            string subDomainPart = string.Empty;
+            string subDomainPart;
 
             if (value.Contains("localhost") == true)
                 subDomainPart = "localhost";
